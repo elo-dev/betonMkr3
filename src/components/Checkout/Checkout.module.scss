@@ -1,0 +1,33 @@
+.checkout {
+  background-color: white !important;
+  margin: 5rem 0 12rem 0;
+}
+
+.form {
+  width: 100%;
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    right: -90%;
+    bottom: -50%;
+    background: url('../../assets/img/betononasos.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+  }
+}
+
+@media screen and (max-width: 976px) {
+  .form::after {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 976px) {
+  .checkout {
+    margin-bottom: 5rem !important;
+  }
+}

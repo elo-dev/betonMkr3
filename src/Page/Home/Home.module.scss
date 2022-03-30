@@ -1,0 +1,34 @@
+.main_section {
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1280px) {
+  .main_section {
+    width: 1170px !important;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .main_section {
+    width: 976px !important;
+  }
+}
+
+@media screen and (max-width: 976px) {
+  .main_section {
+    width: 768px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main_section {
+    width: 576px !important;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .main_section {
+    width: 100% !important;
+    padding: 0 15px;
+  }
+}

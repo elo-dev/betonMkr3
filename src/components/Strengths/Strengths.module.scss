@@ -1,0 +1,24 @@
+.strengths {
+  background-color: white !important;
+  background: linear-gradient(to bottom, #fefcea, var(--main-color)) !important;
+  padding: 10px;
+}
+
+.title {
+  font-size: 1.6em !important;
+  margin-bottom: 2rem !important;
+}
+
+.info_block {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  &__arrow {
+    margin-right: 20px;
+    font-size: 1.2em;
+    color: var(--main-color);
+  }
+  &__text {
+    font-size: 1.1em;
+  }
+}

@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-color: #bc986a;
+  --text-color: #8d8741;
+}
+
+@mixin container {
+  width: 1170px;
+  margin: 0 auto;
+}

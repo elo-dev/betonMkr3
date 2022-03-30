@@ -1,0 +1,39 @@
+.types_binders {
+  background-color: white !important;
+}
+
+.carousel_card {
+  // position: relative;
+  background-color: var(--main-color);
+  padding: 2rem;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.text {
+  width: 50%;
+}
+
+.img_wrapper {
+  position: absolute;
+  right: 10%;
+  z-index: 1000;
+  top: -10%;
+}
+
+.img {
+  width: 350px;
+  height: 230px;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 976px) {
+  .text {
+    width: 100%;
+  }
+  .img_wrapper {
+    display: none;
+  }
+}

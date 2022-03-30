@@ -1,0 +1,23 @@
+.advice{
+  background-color: white !important;
+  &__row{
+    align-items: center;
+  }
+}
+
+.info_block{
+  padding: 15px 30px;
+  background-color: var(--main-color);
+}
+
+.info_text{
+  font-weight: bold;
+  color: white;
+  font-size: 1.25em;
+  margin: 0;
+}
+
+.text{
+  font-weight: 500;
+  font-size: 1.05em;
+}
