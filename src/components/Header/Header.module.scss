@@ -41,19 +41,17 @@
   display: flex;
   justify-content: center;
   list-style: none;
-  background-color: var(--main-color);
-  padding: 8px 25px;
-  border-radius: 20px;
+  margin: 0 !important;
   &__item {
+    background-color: var(--main-color);
+    padding: 8px 25px;
     cursor: pointer;
     color: white;
     text-transform: uppercase;
     font-size: 0.95em;
+    border-right: 1px solid black;
     &:hover {
       opacity: 0.5;
-    }
-    &:not(:last-child) {
-      margin-right: 3rem;
     }
     .link {
       color: white !important;
@@ -92,6 +90,7 @@
     }
   }
   &__callback {
+    text-align: center;
     background: none;
     border: none;
     cursor: pointer;

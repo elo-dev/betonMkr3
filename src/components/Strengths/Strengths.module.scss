@@ -1,6 +1,7 @@
 .strengths {
   background-color: white !important;
   background: linear-gradient(to bottom, #fefcea, var(--main-color)) !important;
+  border-radius: 30px;
   padding: 10px;
 }
 
@@ -19,6 +20,6 @@
     color: var(--main-color);
   }
   &__text {
-    font-size: 1.1em;
+    font-size: 1.2em;
   }
 }

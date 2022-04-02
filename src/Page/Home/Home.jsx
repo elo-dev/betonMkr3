@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Divider } from 'antd'
 
 import MainBanner from '../../components/MainBanner/MainBanner'
@@ -17,6 +17,10 @@ import Map from '../../components/Map/Map'
 import style from './Home.module.scss'
 
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <>
       <MainBanner />

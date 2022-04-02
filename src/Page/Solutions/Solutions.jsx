@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Col, Layout, Row, Typography } from 'antd'
 
 import CheckoutForm from '../../components/CheckoutForm/CheckoutForm'
@@ -10,6 +10,10 @@ import style from './Solutions.module.scss'
 const { Title } = Typography
 
 const Solutions = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <Layout className={style.solutions}>
       <Title>РАСТВОРЫ</Title>
@@ -71,7 +75,7 @@ const Solutions = () => {
           </ul>
         </Col>
       </Row>
-      <Row justify='center' align="middle" gutter={16}>
+      <Row justify="center" align="middle" gutter={16}>
         <Col sm={24} md={16} lg={16} xl={16}>
           <p className={style.info_text}>
             Оба вида цементных растворов (М100 и М200) от завода изготовителя

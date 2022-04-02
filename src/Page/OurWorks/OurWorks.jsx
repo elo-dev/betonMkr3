@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Carousel, Col, Layout, Row, Typography } from 'antd'
 
 import CheckoutForm from '../../components/CheckoutForm/CheckoutForm'
@@ -19,6 +19,10 @@ const OurWorks = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
   }
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <Layout className={style.our_works}>

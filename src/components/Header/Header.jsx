@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { Button, Menu, Typography } from 'antd'
+import { Col, Menu, Row } from 'antd'
 import { MenuOutlined } from '@ant-design/icons'
 import { Link } from 'react-router-dom'
 
@@ -7,7 +7,6 @@ import ModalWindow from '../Modal/Modal'
 
 import style from './Header.module.scss'
 
-const { Title, Text } = Typography
 const { SubMenu } = Menu
 
 const Header = () => {
@@ -39,68 +38,49 @@ const Header = () => {
   return (
     <>
       <header className={style.header} ref={ref}>
-        <div className={style.header__wrapper}>
-          <div className={style.header__logo}>
-            <Link to="/">
-              <Title className={style.header__title} level={1}>
-                МКР
-              </Title>
-            </Link>
-          </div>
-
-          <div className={style.header__info}>
-            <div className={style.info}>
-              <a
-                className={style.info__email}
-                href="mailto:mkrbeton@mail.ru?subject=Заявка на бетон"
-              >
-                mkrbeton@mail.ru
-              </a>
-              <a className={style.info__phoneNum} href="tel:+78003336420">
-                8 (800) 333-64-20
-              </a>
-              <a className={style.info__phoneNum} href="tel:+74993436420">
-                8 (499) 343-64-20
-              </a>
-              <button
-                className={style.info__callback}
-                type="primary"
-                onClick={showModal}
-              >
-                Обратный звонок
-              </button>
-            </div>
-            {isMobile >= 768 ? (
-              <div className={style.header__menu}>
-                <ul className={style.menu}>
-                  <li className={style.menu__item}>
-                    <Link className={style.link} to="/beton">
-                      Бетон
-                    </Link>
-                  </li>
-                  <li className={style.menu__item}>
-                    <Link className={style.link} to="/solutions">
-                      Раствор
-                    </Link>
-                  </li>
-                  <li className={style.menu__item}>
-                    <Link className={style.link} to="/calculations">
-                      Фундамент
-                    </Link>
-                  </li>
-                  <li className={style.menu__item}>
-                    <Link className={style.link} to="/delivery">
-                      Доставка и оплата
-                    </Link>
-                  </li>
-                  <li className={style.menu__item}>
-                    <Link className={style.link} to="/contacts">
-                      Контакты
-                    </Link>
-                  </li>
-                </ul>
+        {isMobile >= 768 ? (
+          <Row align="middle">
+            <Col span={16}>
+              <ul className={style.menu}>
+                <Link className={style.link} to="/">
+                  <li className={style.menu__item}>Главная</li>
+                </Link>
+                <Link className={style.link} to="/beton">
+                  <li className={style.menu__item}>Бетон</li>
+                </Link>
+                <Link className={style.link} to="/solutions">
+                  <li className={style.menu__item}>Раствор</li>
+                </Link>
+                <Link className={style.link} to="/calculations">
+                  <li className={style.menu__item}>Фундамент</li>
+                </Link>
+                <Link className={style.link} to="/delivery">
+                  <li className={style.menu__item}>Доставка и оплата</li>
+                </Link>
+                <Link className={style.link} to="/contacts">
+                  <li className={style.menu__item}>Контакты</li>
+                </Link>
+              </ul>
+            </Col>
+            <Col span={8}>
+              <div>
+                <a className={style.info__phoneNum} href="tel:+78003336420">
+                  8 (800) 333-64-20
+                </a>
+                <a className={style.info__phoneNum} href="tel:+74993436420">
+                  8 (499) 343-64-20
+                </a>
               </div>
-            ) : (
+              <div>
+                <button className={style.info__callback} onClick={showModal}>
+                  Обратный звонок
+                </button>
+              </div>
+            </Col>
+          </Row>
+        ) : (
+          <Row align="middle" gutter={20}>
+            <Col sm={4}>
               <Menu
                 mode="horizontal"
                 selectedKeys={[menuItem]}
@@ -111,6 +91,11 @@ const Header = () => {
                   key="SubMenu"
                   icon={<MenuOutlined className={style.menu_icon} />}
                 >
+                  <Menu.Item key="setting:1">
+                    <Link className={style.link} to="/">
+                      Главная
+                    </Link>
+                  </Menu.Item>
                   <Menu.Item key="setting:1">
                     <Link className={style.link} to="/beton">
                       Бетон
@@ -138,9 +123,24 @@ const Header = () => {
                   </Menu.Item>
                 </SubMenu>
               </Menu>
-            )}
-          </div>
-        </div>
+            </Col>
+            <Col sm={20}>
+              <div>
+                <a className={style.info__phoneNum} href="tel:+78003336420">
+                  8 (800) 333-64-20
+                </a>
+                <a className={style.info__phoneNum} href="tel:+74993436420">
+                  8 (499) 343-64-20
+                </a>
+              </div>
+              <div>
+                <button className={style.info__callback} onClick={showModal}>
+                  Обратный звонок
+                </button>
+              </div>
+            </Col>
+          </Row>
+        )}
       </header>
       <ModalWindow
         isModalVisible={isModalVisible}

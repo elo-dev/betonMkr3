@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Col, Layout, Row, Typography } from 'antd'
 import { Map, Placemark } from 'react-yandex-maps'
 
@@ -11,6 +11,10 @@ import style from './Contacts.module.scss'
 const { Title } = Typography
 
 const Contacts = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <Layout className={style.contacts}>
       <Title level={1}>КОНТАКТЫ</Title>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Col, Layout, Row, Typography } from 'antd'
 import CheckoutForm from '../../components/CheckoutForm/CheckoutForm'
 
@@ -9,6 +9,10 @@ import style from './Delivery.module.scss'
 const { Title } = Typography
 
 const Delivery = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <Layout className={style.delivery}>
       <Title>ДОСТАВКА И ОПЛАТА</Title>

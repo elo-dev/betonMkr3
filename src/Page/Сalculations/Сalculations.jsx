@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Button, Col, Divider, Input, Layout, Row, Typography } from 'antd'
 
 import CheckoutForm from '../../components/CheckoutForm/CheckoutForm'
@@ -42,6 +42,10 @@ const Сalculations = () => {
     const total = +inputWidthA * inputLengthB * C
     setVolumeOfConcrete(total)
   }
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   const handleSubmit = (e) => {
     e.preventDefault()
