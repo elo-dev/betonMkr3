@@ -21,7 +21,7 @@ const Contacts = () => {
       <CheckoutForm />
       <Row>
         <Col span={24}>
-          <p className={style.subtitle}>РАБОТАЕМ КРУГЛОСУТОЧНО!</p>
+          <p className={style.subtitle}>РАБОТАЕМ КАЖДЫЙ ДЕНЬ!</p>
           <p className={style.phone_num}>8 (800) 333-64-20</p>
           <p className={style.phone_num}>8 (499) 343-64-20</p>
         </Col>

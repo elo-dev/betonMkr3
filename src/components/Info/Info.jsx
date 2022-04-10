@@ -33,7 +33,7 @@ const Info = () => {
       <Row className={style.info} justify="space-between" gutter={16}>
         <Col sm={24} md={24} lg={8} xl={8} className={style.info__content}>
           <Title level={1} className={style.title}>
-            БЕТОН В ЩЕЛКОВО
+            БЕТОН В МОСКВЕ И МО
           </Title>
           <p className={style.text}>
             Завод-изготовитель бетона и растворов компания ЕвроПромБетон
